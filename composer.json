@@ -1,0 +1,14 @@
+{
+    "name": "hassansin/php-git-pull",
+    "description": "SH based `git pull` automation using php",
+    "require": {
+        "php": ">=5.0.0",
+        "phpseclib/phpseclib": "~0.3"
+    },
+    "authors": [
+        {
+            "name": "hassansin",
+            "email": "mhkr63@gmail.com"
+        }
+    ]
+}
