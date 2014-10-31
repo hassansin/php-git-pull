@@ -1,12 +1,13 @@
 <?php
 $private_key_file = "/var/www/id_rsa";
+$ssh_host = "your_host";
 $ssh_user = "root";
 $git_repo_path = "/var/www/html";
 $git_repo_passphrase = "your_passphrase";
 
 
 require(__DIR__.'/vendor/autoload.php');
-$ssh = new Net_SSH2('vps.reviewing.net');
+$ssh = new Net_SSH2($ssh_host);
 $key = new Crypt_RSA();
 $key->loadKey(file_get_contents('/var/www/id_rsa'));
 if (!$ssh->login('root', $key)) {
